@@ -1,0 +1,32 @@
+/* ---------- BANNER CTA (fondo oscuro con acento) ---------- */
+.cta-banner{
+  /* background:radial-gradient(90% 120% at 50% 0%,
+    color-mix(in srgb, var(--accent, var(--clay)) 42%, transparent), transparent 70%),
+    var(--dark); */
+
+    background:
+    radial-gradient(55% 75% at 78% 28%, color-mix(in srgb, var(--clay) 32%, transparent), transparent 70%),
+    radial-gradient(50% 65% at 12% 92%, color-mix(in srgb, var(--wine-glow) 30%, transparent), transparent 70%),
+    var(--dark-deep);
+  color:var(--bone);
+  overflow:hidden;
+}
+.cta-inner{
+  max-width:720px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.cta-banner h2{
+  color:var(--bone);
+  font-size:clamp(2rem,4vw,3rem);
+  margin:.4rem 0 1rem;
+}
+.cta-banner p{
+  color:var(--muted-d);
+  font-size:1.12rem;
+  max-width:560px;
+  margin-bottom:2rem;
+}
