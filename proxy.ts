@@ -5,7 +5,7 @@ import {
   detectLang,
 } from "./app/lib/detect-locale";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const res = NextResponse.next();
 
   // Si el visitante ya tiene un idioma (elegido manualmente o detectado

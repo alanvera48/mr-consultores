@@ -329,17 +329,8 @@ export default function Interactions() {
       })
     );
 
-    /* ===== Form demo ===== */
-    const quoteForm = document.getElementById("quoteForm");
-    if (quoteForm) {
-      quoteForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const ok = document.getElementById("formOk");
-        ok.classList.add("show");
-        ok.scrollIntoView({ behavior: "smooth", block: "center" });
-        e.target.reset();
-      });
-    }
+    /* El envío del formulario lo maneja el componente Contact (React)
+       mediante /api/proposal. */
 
     /* ===== Año ===== */
     const year = document.getElementById("year");
