@@ -52,6 +52,7 @@ export const useT = () => dict[useLang().lang];
 export const dict = {
   es: {
     nav: {
+      home: "Inicio",
       nosotros: "Nosotros",
       unidades: "Unidades",
       unidadesNeg: "Unidades de negocio",
@@ -64,7 +65,8 @@ export const dict = {
     },
     hero: {
       eyebrow: "Firma integral de capital humano",
-      h1a: "Construimos organizaciones preparadas para",
+      h1a: "Construimos organizaciones",
+      h1b: "preparadas para",
       h1em: "el futuro",
       lead: "Diseñamos soluciones que combinan experiencia humana, conocimiento especializado y tecnología para impulsar el desarrollo sostenible de cada organización.",
       cta1: "Solicitar propuesta",
@@ -97,13 +99,13 @@ export const dict = {
     about: {
       eyebrow: "Nosotros",
       h2: "Personas, cultura y tecnología para organizaciones que crecen.",
-      lead: "MR Consultores acompaña a organizaciones en crecimiento mediante una propuesta que integra talento, desarrollo organizacional, asesoramiento especializado y tecnología. Diseñamos soluciones que evolucionan junto a cada empresa, combinando cercanía, conocimiento experto y herramientas escalables.",
-      b1t: "Orientación a datos",
-      b1p: "Tomamos decisiones respaldadas por indicadores que permiten medir avances, identificar oportunidades y acompañar el crecimiento con información confiable.",
-      b2t: "Mirada multidisciplinaria",
-      b2p: "Integramos distintas especialidades para abordar cada desafío organizacional desde una perspectiva amplia, coordinada y alineada con el negocio.",
-      b3t: "Resultados medibles",
-      b3p: "Diseñamos soluciones con objetivos claros, indicadores de seguimiento y acompañamiento continuo para generar impacto sostenible.",
+      lead: "En MR Consultores combinamos gestión del talento, desarrollo organizacional, asesoramiento especializado y tecnología para acompañar los desafíos de empresas en constante evolución. Trabajamos cerca de cada cliente, diseñando soluciones prácticas, sostenibles y adaptadas a su realidad.",
+      b1t: "Mirada profesional",
+      b1p: "Trabajamos con metodologías, herramientas y criterios técnicos que respaldan cada recomendación y cada decisión.",
+      b2t: "Visión integral",
+      b2p: "Integramos distintas disciplinas para comprender los desafíos de cada organización desde múltiples perspectivas.",
+      b3t: "Soluciones aplicables",
+      b3p: "Diseñamos propuestas realistas, accionables y adaptadas a la dinámica de cada empresa.",
       quote:
         "“El crecimiento sostenible se construye cuando estrategia, personas y cultura avanzan en la misma dirección.”",
       pillars: ["Estrategia", "Personas", "Cultura"],
@@ -222,16 +224,17 @@ export const dict = {
       tagline: "Diseñado para crecer ✦",
     },
     unitNames: {
-      rrhh: { name: "Recursos Humanos", short: "El núcleo operativo del talento" },
-      do: { name: "Desarrollo Organizacional", short: "Cultura, liderazgo y cambio" },
+      rrhh: { name: "Gestión del Talento", short: "Atracción, desarrollo y desempeño" },
+      do: { name: "Desarrollo Organizacional", short: "Cultura, liderazgo y transformación" },
       psico: { name: "Psicología Laboral", short: "Evaluación y bienestar" },
-      legal: { name: "Legal Laboral", short: "Marco jurídico y compliance" },
+      legal: { name: "Legal Laboral", short: "Cumplimiento y relaciones laborales" },
       tech: { name: "Tecnología y Automatización", short: "Digitalización y transformación" },
     },
   },
 
   en: {
     nav: {
+      home: "Home",
       nosotros: "About",
       unidades: "Units",
       unidadesNeg: "Business units",
@@ -244,7 +247,8 @@ export const dict = {
     },
     hero: {
       eyebrow: "Integral human-capital firm",
-      h1a: "We build organizations ready for",
+      h1a: "We build organizations",
+      h1b: "ready for",
       h1em: "the future",
       lead: "We design solutions that combine human experience, specialized knowledge and technology to drive the sustainable growth of every organization.",
       cta1: "Request a proposal",
@@ -278,12 +282,12 @@ export const dict = {
       eyebrow: "About us",
       h2: "People, culture and technology for organizations that grow.",
       lead: "MR Consultores supports growing organizations with a proposal that integrates talent, organizational development, specialized advisory and technology. We design solutions that evolve with each company, combining closeness, expert knowledge and scalable tools.",
-      b1t: "Data-driven",
-      b1p: "We make decisions backed by indicators that measure progress, identify opportunities and support growth with reliable information.",
-      b2t: "Multidisciplinary view",
-      b2p: "We integrate different specialties to address each organizational challenge from a broad, coordinated and business-aligned perspective.",
-      b3t: "Measurable results",
-      b3p: "We design solutions with clear objectives, tracking indicators and ongoing support to generate sustainable impact.",
+      b1t: "Professional rigor",
+      b1p: "We work with methodologies, tools and technical criteria that back every recommendation and decision.",
+      b2t: "Integral vision",
+      b2p: "We integrate different disciplines to understand each organization's challenges from multiple perspectives.",
+      b3t: "Actionable solutions",
+      b3p: "We design realistic, actionable proposals adapted to the dynamics of each company.",
       quote:
         "“Sustainable growth is built when strategy, people and culture move in the same direction.”",
       pillars: ["Strategy", "People", "Culture"],
@@ -402,10 +406,10 @@ export const dict = {
       tagline: "Designed to grow ✦",
     },
     unitNames: {
-      rrhh: { name: "Human Resources", short: "The operational core of talent" },
-      do: { name: "Organizational Development", short: "Culture, leadership and change" },
+      rrhh: { name: "Talent Management", short: "Attraction, development and performance" },
+      do: { name: "Organizational Development", short: "Culture, leadership and transformation" },
       psico: { name: "Workplace Psychology", short: "Assessment and wellbeing" },
-      legal: { name: "Labor Law", short: "Legal framework and compliance" },
+      legal: { name: "Labor Law", short: "Compliance and labor relations" },
       tech: { name: "Technology & Automation", short: "Digitalization and transformation" },
     },
   },

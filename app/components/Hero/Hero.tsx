@@ -37,7 +37,10 @@ export default function Hero() {
         <div className="hero-copy">
           <span className="eyebrow">{t.hero.eyebrow}</span>
           <h1>
-            {t.hero.h1a}{" "}
+            {t.hero.h1a}
+            <br />
+            {t.hero.h1b}
+            <br />
             <span className={`em${drawn ? " drawn" : ""}`}>{t.hero.h1em}</span>.
           </h1>
           <p className="lead">{t.hero.lead}</p>

@@ -65,23 +65,62 @@ function UnitVisual({ u }: { u: UnitItem }) {
         <div className="o-brain">
           <svg className="brain-svg" viewBox="0 0 200 160">
             <defs>
-              <radialGradient id="brainGrad" cx="38%" cy="30%" r="78%">
-                <stop offset="0" stopColor="#ecdcff" />
-                <stop offset="0.6" stopColor="#6E3DD6" />
-                <stop offset="1" stopColor="#3a1c84" />
+              <radialGradient id="brainGrad" cx="34%" cy="26%" r="86%">
+                <stop offset="0" stopColor="#fbeaff" />
+                <stop offset="0.42" stopColor="#B266F0" />
+                <stop offset="0.78" stopColor="#7A35D6" />
+                <stop offset="1" stopColor="#4A1C9E" />
+              </radialGradient>
+              <linearGradient id="brainStemGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#7A35D6" />
+                <stop offset="1" stopColor="#4A1C9E" />
+              </linearGradient>
+              <radialGradient id="brainGloss" cx="34%" cy="24%" r="50%">
+                <stop offset="0" stopColor="#ffffff" stopOpacity="0.55" />
+                <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
               </radialGradient>
             </defs>
+
+            {/* tronco encefálico */}
+            <path className="brain-stem" d="M120,104 C116,124 138,126 136,106 Z" />
+
+            {/* cerebelo (lóbulo estriado, atrás-abajo) */}
+            <path className="brain-cere" d="M150,86 C170,86 172,112 151,114 C139,115 132,104 137,95 C140,89 145,86 150,86 Z" />
+            <path className="brain-line cere-l" d="M147,90 C156,92 158,100 150,103" />
+            <path className="brain-line cere-l" d="M146,99 C153,101 155,108 148,110" />
+
+            {/* cerebro (perfil lateral, frente a la izquierda) */}
             <path
               className="brain-body"
-              d="M40,86 C28,60 48,42 68,50 C72,32 100,30 106,48 C118,32 146,40 142,64 C162,60 172,84 156,100 C168,118 150,138 132,128 C126,144 96,144 90,124 C76,138 50,132 52,110 C34,114 24,96 40,86 Z"
+              d="M46,96
+                 C24,86 28,58 50,52
+                 C46,32 70,24 84,38
+                 C92,22 116,26 120,44
+                 C132,28 160,32 158,56
+                 C176,62 175,88 153,90
+                 C156,104 138,114 124,104
+                 C112,114 92,112 86,100
+                 C70,110 50,108 46,96 Z"
             />
-            <path className="brain-line" d="M100,46 C92,72 110,96 100,128" />
-            <path className="brain-line" d="M62,72 C76,80 80,68 94,76" />
-            <path className="brain-line" d="M112,76 C126,82 134,72 144,84" />
-            <path className="brain-line" d="M66,104 C80,110 90,102 100,110" />
-            <circle className="syn s1" cx="74" cy="74" r="4.5" />
-            <circle className="syn s2" cx="122" cy="94" r="4.5" />
-            <circle className="syn s3" cx="98" cy="58" r="4.5" />
+
+            {/* brillo glossy */}
+            <path
+              className="brain-gloss"
+              d="M46,96 C24,86 28,58 50,52 C46,32 70,24 84,38 C92,22 116,26 120,44 C132,28 160,32 158,56 C176,62 175,88 153,90 C156,104 138,114 124,104 C112,114 92,112 86,100 C70,110 50,108 46,96 Z"
+            />
+
+            {/* circunvoluciones en espiral (gyri) */}
+            <path className="brain-line" d="M54,88 C38,76 44,54 66,50 C86,46 98,60 92,74" />
+            <path className="brain-line" d="M70,64 C82,59 94,68 89,80" />
+            <path className="brain-line" d="M92,44 C106,42 118,54 113,68 C110,78 98,80 91,73" />
+            <path className="brain-line" d="M122,46 C140,48 150,64 140,76 C134,83 123,82 119,72" />
+            <path className="brain-line" d="M58,78 C68,73 79,79 81,90" />
+            <path className="brain-line" d="M100,86 C110,82 120,88 119,98" />
+
+            {/* sinapsis */}
+            <circle className="syn s1" cx="70" cy="58" r="3.2" />
+            <circle className="syn s2" cx="118" cy="60" r="3.2" />
+            <circle className="syn s3" cx="96" cy="92" r="3.2" />
           </svg>
         </div>
       </div>
@@ -135,7 +174,7 @@ export default function Units() {
                 key={u.key}
                 className={`map-item${i === 0 ? " on" : ""}`}
                 data-u={u.key}
-                style={v({ "--accent": u.accent })}
+                style={v({ "--accent": i % 2 === 0 ? "var(--wine)" : u.accent })}
               >
                 <span className="mi-ic">
                   <u.Icon />
@@ -154,7 +193,7 @@ export default function Units() {
                   key={u.key}
                   className={`map-panel${i === 0 ? " show" : ""}`}
                   data-p={u.key}
-                  style={v({ "--accent": u.accent })}
+                  style={v({ "--accent": i % 2 === 0 ? "var(--wine)" : u.accent })}
                 >
                   <UnitVisual u={u} />
                   <h3>{t.unitNames[u.key].name}</h3>

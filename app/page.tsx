@@ -9,7 +9,6 @@ import Units from "./components/Units";
 import Cases from "./components/Cases";
 import CtaBanner from "./components/CtaBanner";
 import Blog from "./components/Blog";
-import Faq from "./components/Faq";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Interactions from "./components/Interactions";
@@ -29,7 +28,6 @@ export default function Home() {
       <Cases />
       <CtaBanner />
       <Blog />
-      <Faq />
       <Contact />
       <Footer />
       <Interactions />

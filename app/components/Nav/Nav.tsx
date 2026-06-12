@@ -17,7 +17,7 @@ const Caret = () => (
   </svg>
 );
 
-export default function Nav() {
+export default function Nav({ light = false }: { light?: boolean }) {
   const { lang, toggle } = useLang();
   const t = useT();
   const next = lang === "es" ? "EN" : "ES";
@@ -25,7 +25,7 @@ export default function Nav() {
   return (
     <>
       {/* ====================== NAV ====================== */}
-      <nav className="nav" id="nav">
+      <nav className={`nav${light ? " nav-light" : ""}`} id="nav">
         <div className="wrap nav-inner">
           <a href="/" className="brand" data-cursor="">
             <img
@@ -40,6 +40,7 @@ export default function Nav() {
             </span>
           </a>
           <div className="nav-links">
+            <a href="/" data-cursor="">{t.nav.home}</a>
             <a href="/#nosotros" data-cursor="">{t.nav.nosotros}</a>
             <div className="nav-drop">
               <a href="/#unidades" className="nav-drop-trigger" data-cursor="">
@@ -47,11 +48,11 @@ export default function Nav() {
                 <Caret />
               </a>
               <div className="nav-drop-menu" role="menu">
-                {units.map((u) => (
+                {units.map((u, i) => (
                   <a key={u.slug} href={`/unidades/${u.slug}`} data-cursor="">
                     <span
                       className="nd-dot"
-                      style={{ background: u.accent }}
+                      style={{ background: i % 2 === 0 ? "var(--wine)" : u.accent }}
                       aria-hidden="true"
                     />
                     <span>
@@ -65,8 +66,7 @@ export default function Nav() {
                 </a>
               </div>
             </div>
-            <a href="/#casos" data-cursor="">{t.nav.casos}</a>
-            <a href="/#faq" data-cursor="">{t.nav.faq}</a>
+            <a href="/preguntas-frecuentes" data-cursor="">{t.nav.faq}</a>
             <a href="/#contacto" className="btn btn-wine nav-cta" data-cursor="">
               {t.nav.cta}
             </a>
@@ -90,6 +90,7 @@ export default function Nav() {
         <button className="lang-toggle mm-lang" onClick={toggle}>
           {next}
         </button>
+        <a href="/">{t.nav.home}</a>
         <a href="/#nosotros">{t.nav.nosotros}</a>
         <a href="/#unidades">{t.nav.unidadesNeg}</a>
         <div className="mm-sub">
@@ -99,9 +100,8 @@ export default function Nav() {
             </a>
           ))}
         </div>
-        <a href="/#casos">{t.nav.casos}</a>
         <a href="/#blog">{t.nav.blog}</a>
-        <a href="/#faq">{t.faq.eyebrow}</a>
+        <a href="/preguntas-frecuentes">{t.faq.eyebrow}</a>
         <a href="/#contacto" style={{ color: "var(--clay-soft)" }}>
           {t.nav.cta} →
         </a>

@@ -70,35 +70,39 @@ export const units: Unit[] = [
   {
     key: "rrhh",
     slug: "recursos-humanos",
-    name: "Recursos Humanos",
-    short: "El núcleo operativo del talento",
+    name: "Gestión del Talento",
+    short: "Atracción, desarrollo y desempeño",
     accent: "#1F1F24",
-    eyebrow: "Unidad · Recursos Humanos",
-    tagline: "El motor operativo del talento, con procesos que crecen con vos.",
+    eyebrow: "Unidad · Gestión del Talento",
+    tagline: "Atracción, desarrollo y desempeño.",
     intro:
-      "Es el motor operativo de tu empresa: atraemos, incorporamos y acompañamos al talento con procesos claros y medibles que crecen junto a tu organización. Ordenamos el día a día de RRHH para que cada decisión sobre personas tenga método, trazabilidad y respaldo profesional.",
+      "Diseñamos e implementamos sistemas de gestión del talento que permiten atraer, desarrollar y retener a las personas adecuadas, con procesos claros, medibles y alineados a los objetivos del negocio.",
     highlight:
-      "Procesos de personas ordenados y medibles, listos para escalar.",
+      "Gestión del talento ordenada y medible, lista para escalar.",
     services: [
       {
         title: "Reclutamiento y selección",
-        desc: "Búsquedas end-to-end con evaluación profesional: definimos el perfil, atraemos candidatos y acompañamos hasta la incorporación de la persona correcta para tu equipo y tu cultura.",
-      },
-      {
-        title: "Gestión del desempeño",
-        desc: "Diseñamos e implementamos sistemas de objetivos y evaluación que vuelven visible el aporte de cada persona y guían las decisiones de desarrollo.",
-      },
-      {
-        title: "Gestión del talento",
-        desc: "Identificamos potencial, planificamos el crecimiento y fortalecemos el compromiso con estrategias de desarrollo sostenidas en el tiempo.",
-      },
-      {
-        title: "Compensaciones y beneficios",
-        desc: "Estructuras salariales equitativas y competitivas, con esquemas de beneficios alineados a tu estrategia y al mercado.",
+        desc: "Definimos el perfil, evaluamos candidatos y acompañamos todo el proceso hasta incorporar a la persona adecuada para el puesto y la organización.",
       },
       {
         title: "Onboarding",
-        desc: "Procesos de incorporación que aceleran la productividad y la integración cultural desde el primer día.",
+        desc: "Diseñamos procesos de ingreso que reducen los tiempos de adaptación, aceleran el aprendizaje y mejoran la experiencia de incorporación.",
+      },
+      {
+        title: "Gestión del desempeño",
+        desc: "Implementamos sistemas de objetivos, evaluaciones y feedback que permiten medir resultados y tomar mejores decisiones sobre desarrollo y reconocimiento.",
+      },
+      {
+        title: "Gestión del talento",
+        desc: "Identificamos colaboradores con potencial y diseñamos planes de desarrollo que preparan a las personas para asumir nuevos desafíos.",
+      },
+      {
+        title: "Planes de carrera",
+        desc: "Diseñamos recorridos de crecimiento y criterios de promoción que brindan claridad sobre las oportunidades de desarrollo dentro de la organización.",
+      },
+      {
+        title: "Capacitación y desarrollo",
+        desc: "Detectamos necesidades de formación y desarrollamos programas que fortalecen habilidades técnicas, de liderazgo y de gestión.",
       },
     ],
     deliverables: [
@@ -114,34 +118,42 @@ export const units: Unit[] = [
     key: "do",
     slug: "desarrollo-organizacional",
     name: "Desarrollo Organizacional",
-    short: "Cultura, liderazgo y cambio",
+    short: "Cultura, liderazgo y transformación",
     accent: "#3C3C42",
     eyebrow: "Unidad · Desarrollo Organizacional",
-    tagline: "Construimos la organización que tu estrategia necesita.",
+    tagline: "Cultura, liderazgo y transformación.",
     intro:
-      "Cultura, liderazgo y diseño organizacional para crecer sin perder identidad ni talento. Acompañamos los procesos de cambio y construimos las estructuras, los líderes y los recorridos de carrera que tu estrategia necesita para seguir escalando.",
+      "Acompañamos el crecimiento de las organizaciones fortaleciendo su cultura, desarrollando liderazgos y construyendo estructuras capaces de sostener el cambio y la evolución del negocio.",
     highlight:
       "Crecimiento con identidad: estructura, liderazgo y cultura alineados.",
     services: [
       {
         title: "Diagnóstico organizacional",
-        desc: "Relevamiento profundo de cultura, estructura y procesos para identificar palancas de mejora y prioridades de intervención.",
+        desc: "Relevamiento de estructura, cultura y procesos con informe de hallazgos y plan de mejora.",
       },
       {
-        title: "Programas de liderazgo",
-        desc: "Formación y acompañamiento de líderes y equipos para sostener el crecimiento con coherencia y buenas prácticas de gestión.",
+        title: "Estructura organizacional",
+        desc: "Diseño de organigramas, roles, responsabilidades y niveles de decisión alineados a la estrategia del negocio.",
       },
       {
-        title: "Planes de carrera y sucesión",
-        desc: "Recorridos de crecimiento claros y planes de sucesión que retienen al talento clave y aseguran la continuidad del negocio.",
+        title: "Cultura organizacional",
+        desc: "Definición de valores, comportamientos y prácticas que fortalecen la identidad organizacional.",
       },
       {
-        title: "Estructuras organizacionales",
-        desc: "Diseño de organigramas, roles y responsabilidades que ordenan la operación y habilitan la escala.",
+        title: "Gestión del cambio",
+        desc: "Planes de implementación y acompañamiento para facilitar la adopción de nuevas prácticas y procesos.",
       },
       {
-        title: "Employer Branding",
-        desc: "Construimos y comunicamos tu propuesta de valor como empleador para atraer y fidelizar al mejor talento.",
+        title: "Desarrollo de líderes",
+        desc: "Programas de formación y acompañamiento para mandos medios, jefaturas y equipos de conducción.",
+      },
+      {
+        title: "Employee Experience",
+        desc: "Diagnóstico y mejora de la experiencia del colaborador en los principales momentos de su recorrido laboral.",
+      },
+      {
+        title: "Team Building",
+        desc: "Jornadas y actividades orientadas a fortalecer vínculos, confianza y colaboración entre equipos.",
       },
     ],
     deliverables: [
@@ -160,31 +172,39 @@ export const units: Unit[] = [
     short: "Evaluación y bienestar",
     accent: "#9C1026",
     eyebrow: "Unidad · Psicología Laboral",
-    tagline: "Decisiones sobre personas con respaldo técnico real.",
+    tagline: "Evaluación y bienestar.",
     intro:
-      "Evaluación profesional matriculada y bienestar: acompañamos las decisiones sobre personas con respaldo técnico real. Aportamos rigor psicológico a la selección, el desarrollo y el cuidado de los equipos, integrando la mirada clínica al negocio.",
+      "Aportamos evaluación profesional, análisis técnico y herramientas psicológicas para acompañar decisiones vinculadas al talento, el desempeño y el bienestar. Combinamos rigurosidad metodológica, experiencia organizacional y criterios objetivos para intervenir sobre las personas y los equipos.",
     highlight:
-      "Rigor psicológico matriculado al servicio de tus decisiones de talento.",
+      "Psicología aplicada a decisiones de talento con respaldo profesional.",
     services: [
       {
-        title: "Evaluaciones psicotécnicas",
-        desc: "Evaluaciones profesionales con respaldo técnico para identificar potencial y acompañar la toma de decisiones sobre talento.",
+        title: "Psicotécnicos laborales",
+        desc: "Evaluaciones profesionales con respaldo técnico para identificar potencial y orientar las decisiones sobre talento.",
       },
       {
-        title: "Assessment Center",
+        title: "Evaluación por competencias",
         desc: "Dinámicas de evaluación por competencias que observan a la persona en situación, con devolución estructurada.",
       },
       {
-        title: "Coaching laboral",
-        desc: "Acompañamiento individual y de equipos para potenciar habilidades, gestionar el cambio y mejorar el desempeño.",
+        title: "Mapeo de potencial",
+        desc: "Identificación de capacidades y proyección de crecimiento para planificar el desarrollo del talento.",
       },
       {
-        title: "Clima organizacional",
-        desc: "Medimos y diagnosticamos el clima y la satisfacción para anticipar conflictos y diseñar planes de mejora.",
+        title: "Diagnóstico psicosocial",
+        desc: "Relevamiento y gestión de los factores de riesgo psicosocial conforme a buenas prácticas y normativa.",
       },
       {
-        title: "Acompañamiento y bienestar",
-        desc: "Programas de bienestar y cuidado psicológico que sostienen la salud emocional de las personas en el trabajo.",
+        title: "Programas de bienestar",
+        desc: "Programas de bienestar y cuidado psicológico que sostienen la salud emocional de los equipos.",
+      },
+      {
+        title: "Prevención del agotamiento laboral",
+        desc: "Detección temprana y estrategias de prevención del agotamiento para cuidar la energía de las personas.",
+      },
+      {
+        title: "Acompañamiento profesional",
+        desc: "Acompañamiento profesional a personas y equipos en procesos de cambio y desafíos del trabajo.",
       },
     ],
     deliverables: [
@@ -200,34 +220,38 @@ export const units: Unit[] = [
     key: "legal",
     slug: "legal-laboral",
     name: "Legal Laboral",
-    short: "Marco jurídico y compliance",
+    short: "Cumplimiento y relaciones laborales",
     accent: "#55555C",
     eyebrow: "Unidad · Legal Laboral",
-    tagline: "Tranquilidad jurídica integrada al día a día de RRHH.",
+    tagline: "Cumplimiento y relaciones laborales.",
     intro:
-      "Tranquilidad jurídica integrada al día a día de RRHH, firmada por abogada laboral matriculada. Unimos la perspectiva jurídica y la gestión de personas en un mismo lugar, para que el crecimiento de tu organización tenga respaldo y previsibilidad legal.",
+      "Integramos el asesoramiento jurídico laboral con la gestión de personas para prevenir riesgos, garantizar el cumplimiento normativo y fortalecer las relaciones laborales.",
     highlight:
       "Perspectiva jurídica y gestión de personas, en un mismo lugar.",
     services: [
       {
-        title: "Contratos y documentación",
-        desc: "Redacción y revisión de contratos, acuerdos y documentación laboral conforme a la normativa vigente.",
+        title: "Auditorías laborales",
+        desc: "Revisión integral de legajos y documentación para detectar y corregir brechas antes de que sean un problema.",
       },
       {
-        title: "Desvinculaciones y sanciones",
-        desc: "Acompañamiento técnico y humano en desvinculaciones, sanciones y procesos disciplinarios, minimizando el riesgo legal.",
+        title: "Reglamentos internos",
+        desc: "Redacción y actualización de reglamentos internos claros y conformes a la normativa vigente.",
+      },
+      {
+        title: "Políticas de RRHH",
+        desc: "Diseño de políticas de personas que ordenan la gestión y dan previsibilidad a las decisiones.",
+      },
+      {
+        title: "Relaciones laborales",
+        desc: "Gestión del vínculo con colaboradores y representantes, con foco en preservar la relación laboral.",
+      },
+      {
+        title: "Procedimientos disciplinarios",
+        desc: "Acompañamiento técnico y humano en sanciones y procesos disciplinarios, minimizando el riesgo legal.",
       },
       {
         title: "Compliance laboral",
-        desc: "Implementamos y auditamos el cumplimiento normativo para mantener a tu empresa en regla y protegida.",
-      },
-      {
-        title: "Mediación y conflictos",
-        desc: "Gestión y resolución de conflictos individuales y colectivos, con foco en preservar la relación laboral.",
-      },
-      {
-        title: "Auditoría documental",
-        desc: "Revisión integral de legajos y documentación para detectar y corregir brechas antes de que sean un problema.",
+        desc: "Implementación y auditoría del cumplimiento normativo para mantener a tu empresa en regla y protegida.",
       },
     ],
     deliverables: [
@@ -248,9 +272,9 @@ export const units: Unit[] = [
     eyebrow: "Unidad · Tecnología y Automatización",
     tagline: "No solo recomendamos tecnología: la construimos.",
     intro:
-      "Nuestro diferencial menos copiable: no solo recomendamos tecnología, la construimos. Digitalizamos y automatizamos tus procesos de personas con soluciones que simplifican la gestión, optimizan el trabajo y potencian el desarrollo organizacional.",
+      "Diseñamos y desarrollamos software a medida, automatizamos procesos e integramos inteligencia artificial. Y cuando necesitás escalar, sumamos ingenieros senior a tu equipo, listos desde el primer día.",
     highlight:
-      "El diferencial menos copiable: software de RRHH hecho a tu medida.",
+      "Construimos tu software y escalamos tu equipo de ingeniería.",
     services: [
       {
         title: "Automatización de procesos",

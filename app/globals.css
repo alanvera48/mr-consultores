@@ -53,8 +53,8 @@ section{position:relative;z-index:1}
   color:var(--wine);display:inline-flex;align-items:center;gap:.65rem;margin-bottom:1.1rem}
 .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--wine)}
 .eyebrow.on-dark{color:var(--clay-soft)}.eyebrow.on-dark::before{background:var(--clay-soft)}
-.section{padding:120px 0}
-.section-head{max-width:720px;margin-bottom:60px}
+.section{padding:74px 0}
+.section-head{max-width:720px;margin-bottom:38px}
 .section-head h2{font-size:clamp(2.1rem,4.4vw,3.4rem);margin-bottom:1.1rem}
 .section-head p{color:var(--muted);font-size:1.1rem}
 
@@ -90,7 +90,7 @@ section{position:relative;z-index:1}
 /* ---------- 19. RESPONSIVE global ---------- */
 @media (max-width:680px){
   body{font-size:16px}
-  .section{padding:80px 0}
+  .section{padding:52px 0}
 }
 
 /* ============================================================

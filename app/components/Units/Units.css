@@ -53,16 +53,21 @@
 @keyframes grow3{from{height:102px}to{height:142px}}
 
 /* PSICOLOGÍA · cerebro ilustrado (SVG) animado (violeta) */
-.o-brain{position:relative;width:176px;height:140px;animation:brainPulse 3.6s ease-in-out infinite}
-@keyframes brainPulse{0%,100%{transform:scale(.97) rotate(-3deg)}50%{transform:scale(1.04) rotate(3deg)}}
+.o-brain{position:relative;width:184px;height:148px;animation:brainPulse 4.2s ease-in-out infinite}
+@keyframes brainPulse{0%,100%{transform:scale(.98) translateY(1px)}50%{transform:scale(1.03) translateY(-1px)}}
 .o-brain .brain-svg{width:100%;height:100%;display:block;overflow:visible;
-  filter:drop-shadow(0 16px 24px rgba(58,28,132,.5))}
-.o-brain .brain-body{fill:url(#brainGrad)}
-.o-brain .brain-line{fill:none;stroke:#34187a;stroke-opacity:.6;stroke-width:3;stroke-linecap:round}
-.o-brain .syn{fill:#fff;animation:synBlink 1.8s ease-in-out infinite}
+  filter:drop-shadow(0 18px 26px rgba(74,28,158,.45))}
+.o-brain .brain-body{fill:url(#brainGrad);stroke:#3a1378;stroke-width:1.4;stroke-opacity:.35}
+.o-brain .brain-cere{fill:url(#brainGrad);stroke:#3a1378;stroke-width:1.4;stroke-opacity:.3}
+.o-brain .brain-stem{fill:url(#brainStemGrad)}
+.o-brain .brain-gloss{fill:url(#brainGloss);pointer-events:none}
+/* gyri grabados: trazo claro arriba para relieve */
+.o-brain .brain-line{fill:none;stroke:#fbeaff;stroke-opacity:.6;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.o-brain .cere-l{stroke-width:2;stroke-opacity:.5}
+.o-brain .syn{fill:#fff;filter:drop-shadow(0 0 5px rgba(255,255,255,.9));animation:synBlink 1.8s ease-in-out infinite}
 .o-brain .s2{animation-delay:-.7s}
 .o-brain .s3{animation-delay:-1.3s}
-@keyframes synBlink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes synBlink{0%,100%{opacity:.2}50%{opacity:1}}
 
 /* LEGAL · mano (con toga) sosteniendo un martillo y golpeando */
 .o-gavel{position:relative;width:196px;height:170px}

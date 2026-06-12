@@ -9,10 +9,7 @@ export default function Blog() {
     <section
       className="section"
       id="blog"
-      style={{
-        background:
-          "linear-gradient(180deg, var(--avellana) 0%, var(--gray-soft) 100%)",
-      }}
+      style={{ background: "var(--bone)" }}
     >
       <div className="wrap">
         <div className="section-head">

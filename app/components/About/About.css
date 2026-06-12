@@ -3,14 +3,16 @@
 .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:stretch}
 .about-lead{color:var(--muted);font-size:1.08rem;margin-bottom:28px;max-width:560px}
 .about-blocks{display:flex;flex-direction:column;gap:22px}
-.about-block{display:flex;gap:16px}
-.about-block .ab-ic{width:48px;height:48px;border-radius:13px;background:var(--bone-2);display:grid;place-items:center;flex:none;color:var(--accent,var(--clay))}
+.about-block{display:flex;gap:16px;align-items:center}
+/* mismo diseño que el icono de las unidades (.mi-ic) */
+.about-block .ab-ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:none;background:var(--bone-2);color:var(--accent,var(--clay));transition:.3s}
+.about-block:hover .ab-ic{background:var(--accent,var(--clay));color:#fff}
 .about-block .ab-ic svg{width:24px;height:24px}
 .about-block h4{font-family:'Hanken Grotesk';font-weight:700;font-size:1.08rem;color:var(--dark);margin-bottom:2px}
 .about-block p{color:var(--muted);font-size:.94rem}
 
 /* ---------- Fundadora: banda con el mismo fondo que "Alcance global" ---------- */
-.founder-band{margin-top:64px;padding:84px 0;position:relative;overflow:hidden;color:var(--bone);
+.founder-band{margin-top:44px;padding:60px 0;position:relative;overflow:hidden;color:var(--bone);
   background:
     radial-gradient(55% 75% at 78% 28%, color-mix(in srgb, var(--clay) 32%, transparent), transparent 70%),
     radial-gradient(50% 65% at 12% 92%, color-mix(in srgb, var(--wine-glow) 30%, transparent), transparent 70%),

@@ -62,3 +62,13 @@
   .nav-links{display:none}
   .burger{display:flex}
 }
+
+/* ----- Nav con texto claro en páginas de unidad (sobre el hero oscuro) ----- */
+/* Mientras NO está scrolleado (fondo transparente sobre la banda oscura): texto blanco,
+   excepto el dorado "Capital Humano" que se mantiene. Al scrollear (fondo blanco) vuelve a oscuro. */
+.nav.nav-light:not(.scrolled) .brand{color:var(--bone)}
+.nav.nav-light:not(.scrolled) .nav-links a{color:var(--bone)}
+.nav.nav-light:not(.scrolled) .nav-drop-trigger{color:var(--bone)}
+.nav.nav-light:not(.scrolled) .burger span{background:var(--bone)}
+.nav.nav-light:not(.scrolled) .lang-toggle{background:transparent;color:var(--bone);border-color:rgba(245,241,232,.34)}
+.nav.nav-light:not(.scrolled) .lang-toggle:hover{background:var(--bone);color:var(--dark);border-color:var(--bone)}

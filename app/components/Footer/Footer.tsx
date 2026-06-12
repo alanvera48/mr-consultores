@@ -93,7 +93,7 @@ export default function Footer() {
               <li><a href="/#unidades">{t.footer.unidades}</a></li>
               <li><a href="/#casos">{t.footer.casos}</a></li>
               <li><a href="/#blog">{t.footer.blog}</a></li>
-              <li><a href="/#faq">{t.footer.faq}</a></li>
+              <li><a href="/preguntas-frecuentes">{t.footer.faq}</a></li>
             </ul>
           </div>
           <div>
