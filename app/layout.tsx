@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
 import "./globals.css";
 import { LangProvider } from "./lib/i18n";
+import CookieConsent from "./components/CookieConsent";
+import { LANG_COOKIE, type Lang } from "./lib/detect-locale";
 
 const SITE_URL = "https://www.mrconsultores.com"; // TODO: reemplazar por el dominio real
 
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MR Consultores" }],
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/logo-mr-mono.png",
+    shortcut: "/logo-mr-mono.png",
+    apple: "/logo-mr-mono.png",
+  },
   openGraph: {
     type: "website",
     locale: "es_AR",
@@ -76,13 +84,16 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const cookieLang = (await cookies()).get(LANG_COOKIE)?.value;
+  const initialLang: Lang = cookieLang === "en" ? "en" : "es";
+
   return (
-    <html lang="es">
+    <html lang={initialLang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -100,7 +111,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <LangProvider>{children}</LangProvider>
+        <LangProvider initialLang={initialLang}>
+          {children}
+          <CookieConsent />
+        </LangProvider>
       </body>
     </html>
   );

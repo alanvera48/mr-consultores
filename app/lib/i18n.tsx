@@ -16,10 +16,19 @@ const LangContext = createContext<{
   toggle: () => void;
 }>({ lang: "es", setLang: () => {}, toggle: () => {} });
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("es");
+export function LangProvider({
+  children,
+  initialLang = "es",
+}: {
+  children: ReactNode;
+  /** Idioma detectado en el servidor (geo / Accept-Language) vía cookie. */
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
+    // Una elección manual previa (localStorage) siempre gana sobre la
+    // detección automática del servidor.
     const saved = localStorage.getItem("lang");
     if (saved === "en" || saved === "es") {
       setLangState(saved);
@@ -30,6 +39,9 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const setLang = (l: Lang) => {
     setLangState(l);
     localStorage.setItem("lang", l);
+    // Persistimos también en cookie para que el SSR coincida en la próxima
+    // navegación y no haya parpadeo de idioma.
+    document.cookie = `lang=${l};path=/;max-age=${60 * 60 * 24 * 365};samesite=lax`;
     document.documentElement.lang = l;
   };
   const toggle = () => setLang(lang === "es" ? "en" : "es");
@@ -220,8 +232,16 @@ export const dict = {
       casos: "Casos",
       blog: "Centro de conocimiento",
       faq: "Preguntas frecuentes",
+      politicaCookies: "Política de cookies",
       rights: "MR Consultores. Talento y tecnología, en una sola firma.",
       tagline: "Diseñado para crecer ✦",
+    },
+    cookies: {
+      title: "Usamos cookies",
+      desc: "Utilizamos cookies propias y de terceros para que el sitio funcione, recordar tus preferencias y analizar el uso de la web. Podés aceptarlas todas o rechazar las no esenciales.",
+      accept: "Aceptar todas",
+      reject: "Rechazar todas",
+      more: "Política de cookies",
     },
     unitNames: {
       rrhh: { name: "Gestión del Talento", short: "Atracción, desarrollo y desempeño" },
@@ -402,8 +422,16 @@ export const dict = {
       casos: "Cases",
       blog: "Knowledge hub",
       faq: "FAQ",
+      politicaCookies: "Cookie policy",
       rights: "MR Consultores. Talent and technology, in a single firm.",
       tagline: "Designed to grow ✦",
+    },
+    cookies: {
+      title: "We use cookies",
+      desc: "We use our own and third-party cookies to make the site work, remember your preferences and analyze how the site is used. You can accept all or reject the non-essential ones.",
+      accept: "Accept all",
+      reject: "Reject all",
+      more: "Cookie policy",
     },
     unitNames: {
       rrhh: { name: "Talent Management", short: "Attraction, development and performance" },

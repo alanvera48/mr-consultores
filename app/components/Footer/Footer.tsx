@@ -94,6 +94,7 @@ export default function Footer() {
               <li><a href="/#casos">{t.footer.casos}</a></li>
               <li><a href="/#blog">{t.footer.blog}</a></li>
               <li><a href="/preguntas-frecuentes">{t.footer.faq}</a></li>
+              <li><a href="/politica-de-cookies">{t.footer.politicaCookies}</a></li>
             </ul>
           </div>
           <div>
