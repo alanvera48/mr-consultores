@@ -170,7 +170,7 @@ export const units: Unit[] = [
     slug: "psicologia-laboral",
     name: "Psicología Laboral",
     short: "Evaluación y bienestar",
-    accent: "#9C1026",
+    accent: "#9b3cdf",
     eyebrow: "Unidad · Psicología Laboral",
     tagline: "Evaluación y bienestar.",
     intro:

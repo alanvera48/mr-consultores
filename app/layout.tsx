@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: "MR Consultores" }],
   alternates: { canonical: "/" },
   icons: {
-    icon: "/logo-mr-mono.png",
-    shortcut: "/logo-mr-mono.png",
-    apple: "/logo-mr-mono.png",
+    icon: "/logo-sin-fondo-ezgif.com-crop.png",
+    shortcut: "/logo-sin-fondo-ezgif.com-crop.png",
+    apple: "/logo-sin-fondo-ezgif.com-crop.png",
   },
   openGraph: {
     type: "website",

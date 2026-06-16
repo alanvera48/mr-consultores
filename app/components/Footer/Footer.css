@@ -29,7 +29,7 @@
   transition:color .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
 .socials .cs-link svg{position:relative;z-index:1;width:19px;height:19px;transition:transform .4s var(--ease)}
 .socials .cs-link::before{content:"";position:absolute;left:-12%;right:-12%;bottom:0;height:150%;z-index:0;border-radius:42% 42% 0 0;
-  background:linear-gradient(180deg,#e8d8b6,var(--logo) 45%,#9a8255);
+  background:linear-gradient(180deg,#a9e6e0,var(--logo) 45%,#2f9389);
   transform:translateY(102%);transition:transform .6s cubic-bezier(.4,0,.2,1)}
 .socials .cs-link:hover{color:#241814;border-color:var(--logo);transform:translateY(-3px);
   box-shadow:0 12px 24px -12px color-mix(in srgb,var(--logo) 75%,transparent)}

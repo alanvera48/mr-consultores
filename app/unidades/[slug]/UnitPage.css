@@ -499,25 +499,41 @@
 .u-ai-card h3{font-family:'Fraunces',serif;font-size:1.2rem;color:var(--dark);margin-bottom:.35rem}
 .u-ai-card p{color:var(--muted);font-size:.92rem}
 
-/* Cerebro transparente (line-art) con contornos brillantes */
+/* Cara de robot (IA) en paleta vino */
 .u-ai-visual{display:grid;place-items:center;padding:20px 0}
-.ai-brain{width:100%;max-width:300px;height:auto;overflow:visible}
-.ai-brain-out{fill:none;stroke:var(--wine);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
-  vector-effect:non-scaling-stroke;
-  filter:drop-shadow(0 0 5px color-mix(in srgb,var(--wine) 60%,transparent));
-  animation:aiGlow 3s ease-in-out infinite}
-.ai-syn{fill:var(--wine);transform-box:fill-box;transform-origin:center;
-  filter:drop-shadow(0 0 3px var(--wine));animation:aiSyn 2.4s ease-in-out infinite}
-.ai-syn.s2{animation-delay:.5s}
-.ai-syn.s3{animation-delay:1s}
-.ai-syn.s4{animation-delay:1.6s}
-@keyframes aiGlow{
-  0%,100%{filter:drop-shadow(0 0 3px color-mix(in srgb,var(--wine) 40%,transparent))}
-  50%{filter:drop-shadow(0 0 13px color-mix(in srgb,var(--wine) 90%,transparent))}
-}
-@keyframes aiSyn{0%,100%{opacity:.2;transform:scale(.5)}50%{opacity:1;transform:scale(1.7)}}
+.ai-robot{width:100%;max-width:360px;height:auto;overflow:visible;
+  filter:drop-shadow(0 18px 28px rgba(94,10,22,.4))}
+.ai-robot .rob-bob{transform-box:view-box;transform-origin:center;
+  animation:aiRobBob 4.6s ease-in-out infinite}
+/* cabeza y partes metálicas */
+.ai-robot .rob-head{fill:url(#uRobHead);stroke:#4a0a12;stroke-width:1.4;stroke-opacity:.35}
+.ai-robot .rob-ear{fill:#7a0c1d;stroke:#4a0a12;stroke-width:1.2;stroke-opacity:.4}
+.ai-robot .rob-neck{fill:#7a0c1d}
+.ai-robot .rob-shoulder{fill:url(#uRobHead);stroke:#4a0a12;stroke-width:1.4;stroke-opacity:.3}
+/* antena con bulbo que late */
+.ai-robot .rob-antenna{stroke:#7a0c1d;stroke-width:4;stroke-linecap:round}
+.ai-robot .rob-bulb{fill:url(#uRobEye);
+  filter:drop-shadow(0 0 7px rgba(255,125,150,.9));
+  animation:aiRobGlow 1.8s ease-in-out infinite}
+/* pantalla de la cara */
+.ai-robot .rob-face{fill:url(#uRobFace);stroke:#4a0a12;stroke-width:1;stroke-opacity:.5}
+/* ojos que parpadean */
+.ai-robot .rob-eye{fill:url(#uRobEye);transform-box:fill-box;transform-origin:center;
+  filter:drop-shadow(0 0 6px rgba(255,125,150,.95));
+  animation:aiRobBlink 4s ease-in-out infinite}
+/* boca tipo altavoz */
+.ai-robot .rob-mouth{fill:none;stroke:#ff9db0;stroke-width:2;stroke-opacity:.8}
+.ai-robot .rob-mouth-bar{stroke:#ff9db0;stroke-width:2;stroke-opacity:.6;stroke-linecap:round;
+  transform-box:fill-box;transform-origin:center;
+  animation:aiRobTalk 1.4s ease-in-out infinite}
+.ai-robot .rob-mouth-bar:nth-of-type(2){animation-delay:.2s}
+.ai-robot .rob-mouth-bar:nth-of-type(3){animation-delay:.4s}
+@keyframes aiRobBob{0%,100%{transform:translateY(2px) rotate(-1deg)}50%{transform:translateY(-3px) rotate(1deg)}}
+@keyframes aiRobGlow{0%,100%{opacity:.7;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes aiRobBlink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+@keyframes aiRobTalk{0%,100%{transform:scaleY(.6)}50%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){
-  .ai-brain-out,.ai-syn{animation:none}
+  .ai-robot .rob-bob,.ai-robot .rob-bulb,.ai-robot .rob-eye,.ai-robot .rob-mouth-bar{animation:none}
 }
 
 @media (max-width:880px){

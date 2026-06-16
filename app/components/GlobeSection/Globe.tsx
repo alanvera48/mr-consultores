@@ -59,9 +59,9 @@ export default function Globe() {
       mapBrightness: 9, // continentes visibles sin lavar
       mapBaseBrightness: 0.05, // piso de luz: los puntos se leen aun en el borde
       baseColor: [0.45, 0.47, 0.52], // pizarra: continentes con buen contraste
-      markerColor: [0.66, 0.58, 0.46], // champagne apagado (nodos discretos)
+      markerColor: [0.251, 0.749, 0.706], // champagne apagado (nodos discretos)
       glowColor: [0.4, 0.43, 0.52], // halo tenue para no lavar el mapa
-      arcColor: [0.42, 0.39, 0.34], // champagne muy apagado: líneas sutiles
+      arcColor: [0.251, 0.749, 0.706], // #40bfb4 (turquesa)
       arcWidth: 0.4,
       arcHeight: 0.28,
       markers: [

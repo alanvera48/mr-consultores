@@ -151,14 +151,6 @@ export default async function UnitPage({
                 </p>
                 <div className="u-modes">
                   <article className="u-mode">
-                    <h3>Staff Augmentation</h3>
-                    <p>
-                      Sumamos ingenieros senior a tu equipo —en tus standups, tu
-                      repo y tus herramientas— para escalar tu capacidad sin
-                      largos ciclos de contratación.
-                    </p>
-                  </article>
-                  <article className="u-mode">
                     <h3>Software Factory</h3>
                     <p>
                       Tomamos tu producto de punta a punta: diseñamos,
@@ -281,17 +273,54 @@ export default async function UnitPage({
             <section className="section u-ai-sec">
               <div className="wrap u-ai-grid">
                 <div className="u-ai-visual" aria-hidden="true">
-                  <svg className="ai-brain" viewBox="0 0 24 24" fill="none">
-                    <path className="ai-brain-out" d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
-                    <path className="ai-brain-out" d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
-                    <path className="ai-brain-out" d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
-                    <path className="ai-brain-out" d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
-                    <path className="ai-brain-out" d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
-                    <path className="ai-brain-out" d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
-                    <circle className="ai-syn s1" cx="12" cy="6.4" r="0.5" />
-                    <circle className="ai-syn s2" cx="16.6" cy="12" r="0.5" />
-                    <circle className="ai-syn s3" cx="7.4" cy="12" r="0.5" />
-                    <circle className="ai-syn s4" cx="12" cy="17.6" r="0.5" />
+                  <svg className="ai-robot" viewBox="0 0 200 210" fill="none">
+                    <defs>
+                      <radialGradient id="uRobHead" cx="34%" cy="26%" r="82%">
+                        <stop offset="0" stopColor="#f5edfc" />
+                        <stop offset="0.45" stopColor="#b15ce6" />
+                        <stop offset="0.8" stopColor="#9b3cdf" />
+                        <stop offset="1" stopColor="#5a1a86" />
+                      </radialGradient>
+                      <radialGradient id="uRobFace" cx="50%" cy="40%" r="75%">
+                        <stop offset="0" stopColor="#2a0a40" />
+                        <stop offset="1" stopColor="#1a0628" />
+                      </radialGradient>
+                      <radialGradient id="uRobEye" cx="40%" cy="35%" r="70%">
+                        <stop offset="0" stopColor="#ffffff" />
+                        <stop offset="0.55" stopColor="#ecd9fc" />
+                        <stop offset="1" stopColor="#c98cf0" />
+                      </radialGradient>
+                    </defs>
+
+                    <g className="rob-bob">
+                      {/* antena */}
+                      <line className="rob-antenna" x1="100" y1="40" x2="100" y2="20" />
+                      <circle className="rob-bulb" cx="100" cy="15" r="7" />
+
+                      {/* orejas / paneles laterales */}
+                      <rect className="rob-ear" x="30" y="92" width="14" height="36" rx="6" />
+                      <rect className="rob-ear" x="156" y="92" width="14" height="36" rx="6" />
+
+                      {/* cabeza */}
+                      <rect className="rob-head" x="42" y="42" width="116" height="120" rx="30" />
+
+                      {/* pantalla de la cara */}
+                      <rect className="rob-face" x="56" y="58" width="88" height="88" rx="22" />
+
+                      {/* ojos */}
+                      <circle className="rob-eye" cx="82" cy="92" r="11" />
+                      <circle className="rob-eye" cx="118" cy="92" r="11" />
+
+                      {/* boca tipo altavoz */}
+                      <rect className="rob-mouth" x="78" y="118" width="44" height="14" rx="7" />
+                      <line className="rob-mouth-bar" x1="90" y1="118" x2="90" y2="132" />
+                      <line className="rob-mouth-bar" x1="100" y1="118" x2="100" y2="132" />
+                      <line className="rob-mouth-bar" x1="110" y1="118" x2="110" y2="132" />
+
+                      {/* cuello / base */}
+                      <rect className="rob-neck" x="86" y="160" width="28" height="14" rx="5" />
+                      <path className="rob-shoulder" d="M58 200 C58 182 78 174 100 174 C122 174 142 182 142 200 Z" />
+                    </g>
                   </svg>
                 </div>
                 <div className="u-ai-copy">

@@ -94,7 +94,7 @@ export default function Interactions() {
           svg: '<circle cx="12" cy="12" r="3.2"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/>',
         },
         {
-          c: "#9C1026",
+          c: "#9b3cdf",
           label: "Psicología",
           svg: '<path d="M12 4a5 5 0 0 0-5 5c0 1.7.8 2.8.8 4 0 1.3 1.2 2 4.2 2s4.2-.7 4.2-2c0-1.2.8-2.3.8-4a5 5 0 0 0-5-5Z"/>',
         },

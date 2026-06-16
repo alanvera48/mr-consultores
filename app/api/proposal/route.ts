@@ -37,7 +37,7 @@ function buildHtml(data: Payload): string {
     return `
       <tr>
         <td style="padding:14px 0;border-bottom:1px solid #efe7e0;vertical-align:top;width:160px;">
-          <span style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9c1026;">${label}</span>
+          <span style="font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#9b3cdf;">${label}</span>
         </td>
         <td style="padding:14px 0;border-bottom:1px solid #efe7e0;color:#241b17;font-size:15px;line-height:1.55;${isMessage ? "white-space:pre-wrap;" : ""}">${clean}</td>
       </tr>`;
@@ -57,8 +57,8 @@ function buildHtml(data: Payload): string {
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -28px rgba(36,27,23,.4);">
           <!-- Header con logo -->
           <tr>
-            <td style="background:#9c1026;padding:28px 36px;text-align:center;">
-              <img src="${SITE_URL}/logo-mr.png" alt="MR Consultores" width="150" style="display:inline-block;max-width:150px;height:auto;" />
+            <td style="background:#9b3cdf;padding:28px 36px;text-align:center;">
+              <img src="${SITE_URL}/logo-sin-fondo-ezgif.com-crop.png" alt="üno consultores" width="150" style="display:inline-block;max-width:150px;height:auto;" />
             </td>
           </tr>
           <!-- Título -->
@@ -133,7 +133,7 @@ export async function POST(req: Request) {
     if (error) {
       console.error("Resend error:", error);
       return NextResponse.json(
-        { error: "No se pudo enviar el email." },
+        { error: "No se pudo enviar el email.", detail: error.message },
         { status: 502 },
       );
     }

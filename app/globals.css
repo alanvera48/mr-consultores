@@ -19,12 +19,12 @@
   --dark-deep:#000000;   /* negro */
   --clay:#33333A;        /* gris oscuro — acento neutro */
   --clay-soft:#9A9AA2;
-  --wine:#9C1026;        /* cereza oscuro — acento (en menor cantidad) */
-  --wine-glow:#C2253F;
-  --gold:#5A5A62;        /* gris medio — acento terciario */
-  --gold-soft:#B7B7BE;
-  --logo:#C0B098;        /* champagne del logo — único acento cálido, en detalles */
-  --logo-deep:#A1895F;   /* champagne profundo para texto/contraste */
+  --wine:#9b3cdf;        /* PÚRPULA marca — acento principal */
+  --wine-glow:#b15ce6;   /* púrpura claro para glow/hover */
+  --gold:#727372;        /* GRIS marca — acento terciario */
+  --gold-soft:#A9AAA9;
+  --logo:#40bfb4;        /* TEAL marca — acento cálido, en detalles */
+  --logo-deep:#2f9389;   /* teal profundo para texto/contraste */
   --sand:#E4E4E7;        /* bordes gris claro */
   --text:#1A1A1A;        /* texto casi negro */
   --muted:#6B6B72;       /* texto gris */

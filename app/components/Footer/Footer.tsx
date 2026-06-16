@@ -14,14 +14,11 @@ export default function Footer() {
             <a href="/" className="brand" data-cursor="">
               <img
                 className="brand-logo"
-                src="/logo-mr-mono.png"
-                alt="MR Consultores"
-                width={58}
-                height={42}
+                src="/logo-sin-fondo-ezgif.com-crop.png"
+                alt="üno consultores"
+                width={120}
+                height={96}
               />
-              <span>
-                MR Consultores<small>Capital Humano</small>
-              </span>
             </a>
             <p className="ab">{t.footer.about}</p>
             <div className="socials">
